@@ -1,0 +1,389 @@
+<!-- /index.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>داشبورد</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="source/styles/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- Sidebar -->
+             
+            <nav class="col-1 col-md-1 sidebar d-flex flex-column d-none d-md-block">
+                <a href="#" class="text-decoration-none mb-3 fs-5 d-flex align-items-center">
+                    <img src="source/gallery/logo-no-background_wI5fwWo.png" class="card-img w-7" alt="">
+                </a>
+                <hr>
+                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-house nav-icon"></i> خانه </a>
+                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-gear nav-icon"></i> تنضیمات</a>
+                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-columns-gap nav-icon"></i> صفحات </a>
+                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-door-open nav-icon"></i>خروج </a>
+            </nav>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMobile">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-primary">Admin Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+          <li><a href="users.html" class="nav-link">Users</a></li>
+          <li><a href="content.html" class="nav-link">Content</a></li>
+          <li><a href="media.html" class="nav-link">Media</a></li>
+          <li><a href="analytics.html" class="nav-link">Analytics</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+          <li><a href="#" class="nav-link text-danger">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+            <!-- Main Content -->
+            <div class="col-12 col-md-11 py-3">
+                <!-- Navbar -->
+                <div class="d-flex flex-wrap align-items-center mb-5 topbar">
+                    <div class="col-12">
+                        <button class="btn btn-outline-secondary d-md-none" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile">☰</button>
+                    </div>
+                    <div class="d-flex align-items-center me-5">
+                        <i class="bi bi-person-circle fs-4"></i>
+                        <span class="ms-2 fw-bold">استاد محمدرضا وثوقی</span>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-primary btn-sm btn-custom">15 <i class="bi bi-bell"></i></button>
+                        <button class="btn btn-outline-secondary btn-sm btn-custom">تقویم <i class="bi bi-calendar-date"></i></button>
+                    </div>
+                </div>
+
+                <!-- First Row -->
+                <div class="row d-flex justify-content-around">
+                    <!-- Daily Schedule -->
+                    <div class="card schedule-card">
+                        <div class="card-header d-flex">
+                            <p class="me-4">برنامه امروز</p>
+                            <p class="">1404/07/23</p>
+                        </div>
+                        <div class="gap-3 d-flex flex-wrap py-4">
+                            <div class="card  p-3 text-center daily-card">
+                                <div class="card-header mt-3">تمرینات برنامه نویسی 11A </div>
+                                <div class="card-body p-0 ">
+                                    <div class="class-time d-flex justify-content-between">
+                                        <p>زنگ:</p>
+                                        <p>12.00 : 13.20 </p>
+                                    </div>
+                                    <div class="col-12 d-flex" >                                    
+                                        <button class="btn text-light schedule-button">لیست کلاسی</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  p-3 text-center daily-card">
+                                <div class="card-header mt-3">تمرینات برنامه نویسی 11A </div>
+                                <div class="card-body p-0 ">
+                                    <div class="class-time d-flex justify-content-between">
+                                        <p>زنگ:</p>
+                                        <p>12.00 : 13.20 </p>
+                                    </div>
+                                    <div class="col-12 d-flex" >                                    
+                                        <button class="btn text-light schedule-button">لیست کلاسی</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card  p-3 text-center daily-card">
+                                <div class="card-header mt-3">تمرینات برنامه نویسی 11A </div>
+                                <div class="card-body p-0 ">
+                                    <div class="class-time d-flex justify-content-between">
+                                        <p>زنگ:</p>
+                                        <p>12.00 : 13.20 </p>
+                                    </div>
+                                    <div class="col-12 d-flex" >                                    
+                                        <button class="btn text-light schedule-button">لیست کلاسی</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+                    <!-- Line Chart -->
+                    <div class="card chart-card">
+                        <div class="card-header">میانگین نمرات</div>
+                        <div class="card-body">
+                            <canvas id="scoreChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 error-card">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <div class="col card position-relative mt-5 border ">
+                                        <div class="card-header text-center me-4">
+                                            <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
+                                                style="bottom: 91%;"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                    veniam voluptas aliquam. Provident iure dolores obcaecati eius aut
+                                                    tenetur fugiat, </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 ">
+                        <div class="row d-flex justify-content-between mt-4">
+                            <div class="col-12 col-md-6">
+                                <div class="card weekly-scecule-card h-100">
+                                    <div class="card-header d-flex justify-content-between">
+                                        <p>برنامه هفتگی</p>
+                                        <select class="form-select">
+                                            <option value="fa" selected>شنبه</option>
+                                            <option value="en">یکشنبه</option>
+                                            <option value="en">دوشنبه</option>
+                                            <option value="en">سه شنبه</option>
+                                            <option value="en">چهارشنبه</option>
+                                        </select>
+                                    </div>
+                                    <table class="table table-custom">
+                                        <thead class="p-3">
+                                            <tr>
+                                                <th class="col text-center">زنگ</th>
+                                                <th class="col">درس</th>
+                                                <th class="col">کلاس</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <hr style="width: 90%; margin: 20px auto;">
+                                            </tr>
+
+                                            <tr>
+                                                <th class=" text-center">1</th>
+                                                <td>تمرینات برنامه نویسی</td>
+                                                <td>12 A</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th class=" text-center">2</th>
+                                                <td>تمرینات برنامه نویسی</td>
+                                                <td>12 A</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th class=" text-center">3</th>
+                                                <td>تمرینات برنامه نویسی</td>
+                                                <td>12 A</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="card reports-card h-100">
+                                    <div class="card-header">
+                                        <p class="font-bold">گزارش</p>
+                                    </div>
+                                    <form method="POST" id="contactForm" action="/contact-us" class="p-3">
+                                        <div class="form-group ">
+                                            <label for="name" class="form-label font-bold">موضوع</label>
+                                            <input type="text" name="name" id="name"
+                                                class="form-control focus-ring-danger" placeholder="موضوع...."
+                                                required="">
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="email" class="form-label font-bold">تاریخ</label>
+                                            <input type="email" name="email" id="email" class="form-control"
+                                                placeholder="1404/6/31" required="">
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="message" class="form-label font-bold">پیام</label>
+                                            <textarea name="message" id="message" class="form-control" rows="4"
+                                                placeholder="پیام......." required=""
+                                                style="max-height: 100px;"></textarea>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: "2",
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                 breakpoints: {
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 3 },
+      },
+            });
+        </script>
+        <script>
+            const ctx = document.getElementById('scoreChart');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر'],
+                    datasets: [{
+                        label: 'نمرات',
+                        data: [10, 15, 20, 1],
+                        borderColor: '#2c3a41',
+                        backgroundColor: '#b4c3d0',
+                        tension: 0.4,
+                        fill: false
+                    }]
+                },
+                options: {
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { ticks: { stepSize: 5 } }
+                    }
+                }
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/41290f7b5b.js" crossorigin="anonymous"></script>
+        <script src="source/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="source/scripts/script.js"></script>
+</body>
+
+</html>
