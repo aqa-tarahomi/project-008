@@ -20,40 +20,39 @@
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <!-- Sidebar -->
-             
-            <nav class="col-1 col-md-1 sidebar d-flex flex-column d-none d-md-block">
-                <a href="#" class="text-decoration-none mb-3 fs-5 d-flex align-items-center">
-                    <img src="source/gallery/logo-no-background_wI5fwWo.png" class="card-img w-7" alt="">
-                </a>
-                <hr>
-                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-house nav-icon"></i> خانه </a>
-                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-gear nav-icon"></i> تنضیمات</a>
-                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-columns-gap nav-icon"></i> صفحات </a>
-                <a href="#" class="nav-link text-start ms-4"><i class="bi bi-door-open nav-icon"></i>خروج </a>
+            <nav class="navbar navbar-expand-lg col-auto col-lg-1 align-items-start">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas"
+                    aria-labelledby="sidebarOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body ">
+                        <nav class="d-flex flex-column">
+                            <a href="#" class="text-decoration-none mb-3 fs-5 d-flex align-items-center">
+                                <img src="source/gallery/logo-no-background_wI5fwWo.png" class="nav-img card-img" alt="">
+                            </a>
+                            <hr>
+                            <a href="#" class="nav-link text-start ms-2"><i class="bi bi-house nav-icon"></i> خانه </a>
+                            <a href="#" class="nav-link text-start ms-2"><i class="bi bi-gear nav-icon"></i> تنضیمات</a>
+                            <a href="#" class="nav-link text-start ms-2"><i class="bi bi-columns-gap nav-icon"></i>
+                                صفحات </a>
+                            <a href="#" class="nav-link text-start ms-2"><i class="bi bi-door-open nav-icon"></i> خروج
+                            </a>
+                        </nav>
+                    </div>
+                </div>
             </nav>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMobile">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title text-primary">Admin Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="nav flex-column">
-          <li><a href="index.html" class="nav-link active">Dashboard</a></li>
-          <li><a href="users.html" class="nav-link">Users</a></li>
-          <li><a href="content.html" class="nav-link">Content</a></li>
-          <li><a href="media.html" class="nav-link">Media</a></li>
-          <li><a href="analytics.html" class="nav-link">Analytics</a></li>
-          <li><a href="support.html" class="nav-link">Support</a></li>
-          <li><a href="#" class="nav-link text-danger">Logout</a></li>
-        </ul>
-      </div>
-    </div>
+
             <!-- Main Content -->
-            <div class="col-12 col-md-11 py-3">
+            <div class="col-12 col-lg-11 py-3">
                 <!-- Navbar -->
                 <div class="d-flex flex-wrap align-items-center mb-5 topbar">
                     <div class="col-12">
-                        <button class="btn btn-outline-secondary d-md-none" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile">☰</button>
+                        <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
+                            <span class="navbar-toggler-icon">☰</span>
+                        </button>
                     </div>
                     <div class="d-flex align-items-center me-5">
                         <i class="bi bi-person-circle fs-4"></i>
@@ -61,7 +60,8 @@
                     </div>
                     <div>
                         <button class="btn btn-outline-primary btn-sm btn-custom">15 <i class="bi bi-bell"></i></button>
-                        <button class="btn btn-outline-secondary btn-sm btn-custom">تقویم <i class="bi bi-calendar-date"></i></button>
+                        <button class="btn btn-outline-secondary btn-sm btn-custom">تقویم <i
+                                class="bi bi-calendar-date"></i></button>
                     </div>
                 </div>
 
@@ -73,15 +73,15 @@
                             <p class="me-4">برنامه امروز</p>
                             <p class="">1404/07/23</p>
                         </div>
-                        <div class="gap-3 d-flex flex-wrap py-4">
-                            <div class="card  p-3 text-center daily-card">
+                        <div class="d-flex flex-wrap pb-4 daily-card-section">
+                            <div class="card p-3 text-center daily-card">
                                 <div class="card-header mt-3">تمرینات برنامه نویسی 11A </div>
                                 <div class="card-body p-0 ">
                                     <div class="class-time d-flex justify-content-between">
                                         <p>زنگ:</p>
                                         <p>12.00 : 13.20 </p>
                                     </div>
-                                    <div class="col-12 d-flex" >                                    
+                                    <div class="col-12 d-flex">
                                         <button class="btn text-light schedule-button">لیست کلاسی</button>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                         <p>زنگ:</p>
                                         <p>12.00 : 13.20 </p>
                                     </div>
-                                    <div class="col-12 d-flex" >                                    
+                                    <div class="col-12 d-flex">
                                         <button class="btn text-light schedule-button">لیست کلاسی</button>
                                     </div>
                                 </div>
@@ -105,12 +105,12 @@
                                         <p>زنگ:</p>
                                         <p>12.00 : 13.20 </p>
                                     </div>
-                                    <div class="col-12 d-flex" >                                    
+                                    <div class="col-12 d-flex">
                                         <button class="btn text-light schedule-button">لیست کلاسی</button>
                                     </div>
                                 </div>
                             </div>
-                            
+
 
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12 col-md-6 error-card">
+                    <div class="col-12 col-lg-6 error-card">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -143,7 +143,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="col card position-relative mt-5 border ">
                                         <div class="card-header text-center me-4">
                                             <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
@@ -158,7 +158,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="col card position-relative mt-5 border ">
                                         <div class="card-header text-center me-4">
                                             <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
@@ -173,7 +173,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="col card position-relative mt-5 border ">
                                         <div class="card-header text-center me-4">
                                             <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
@@ -188,7 +188,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="col card position-relative mt-5 border ">
                                         <div class="card-header text-center me-4">
                                             <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
@@ -203,7 +203,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="col card position-relative mt-5 border ">
                                         <div class="card-header text-center me-4">
                                             <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
@@ -218,7 +218,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="col card position-relative mt-5 border ">
                                         <div class="card-header text-center me-4">
                                             <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
@@ -233,7 +233,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="col card position-relative mt-5 border ">
                                         <div class="card-header text-center me-4">
                                             <i class="fa-solid fa-triangle-exclamation h1 text-danger position-absolute"
@@ -255,9 +255,9 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-6 ">
+                    <div class="col-12 col-lg-6 ">
                         <div class="row d-flex justify-content-between mt-4">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="card weekly-scecule-card h-100">
                                     <div class="card-header d-flex justify-content-between">
                                         <p>برنامه هفتگی</p>
@@ -307,7 +307,7 @@
 
                             </div>
 
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="card reports-card h-100">
                                     <div class="card-header">
                                         <p class="font-bold">گزارش</p>
@@ -352,10 +352,10 @@
                     el: ".swiper-pagination",
                     clickable: true,
                 },
-                 breakpoints: {
-        1024: { slidesPerView: 3 },
-        1280: { slidesPerView: 3 },
-      },
+                breakpoints: {
+                    1024: { slidesPerView: 2 },
+                    1280: { slidesPerView: 3 },
+                },
             });
         </script>
         <script>
