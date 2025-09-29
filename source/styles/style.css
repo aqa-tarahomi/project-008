@@ -139,6 +139,14 @@ textarea::placeholder {
   gap: 2%;
   row-gap: 20px;
 }
+.offcanvas-btn{
+  border: 3px solid #475d83;
+  background-color: #d3d4d6;
+}
+.offcanvas-btn:hover{
+  background-color: #b4b4b4;
+  border: 3px solid #475d83;
+}
 @media (max-width:768px) {
 .schedule-card {
   width: 95%;
